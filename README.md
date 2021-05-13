@@ -1,27 +1,27 @@
 # Actualizar paquetes
 
-Revisar que paquetes disponen de nuevas versiones
+Revisar que paquetes disponen de nuevas versiones.
     npm outdate
 
-Para ver un output más detallado
+Para ver un output más detallado.
 
     npm outdate --dd
 
-Actualizar los paquetes que no están en la ultima versión
+Actualizar los paquetes que no están en la ultima versión.
 
     npm update
 
-Actualizar un paquete especifico
+Actualizar un paquete específico.
 
     npm install json-server@latest
 
 # Eliminar paquetes
 
-Eliminar un paquete de node_modules y del archivo package.json
+Eliminar un paquete de node_modules y del archivo package.json.
 
      npm uninstall json-server
 
-Desinstalar un paquete de todo node_modules pero no del archivo package.json
+Desinstalar un paquete de todo node_modules pero no del archivo package.json.
         npm uninstall webpack --no-save
 
 # Solución de errores
@@ -43,9 +43,29 @@ Otra alternativa para eliminar de forma segura una carpeta es instalando el sigu
 
     sudo npm install -g rimraf
 
-Ahora podemos ejecutar el siguiente comando para eliminar node_module
+Ahora podemos ejecutar el siguiente comando para eliminar node_module.
 
     rimraf node_modules 
     #Ahora podemos volver a instalar nuestro paquetes
     npm install
 
+
+# Seguridad 
+
+Para ver las vulnerabilidades que tenemos en nuestro proyecto.
+
+    npm audit
+
+Nos genera un json con información un poco mas detallada de lo que esta pasando con estos paquetes que instalamos.
+
+    npm audit --json
+
+Una vez sepamos cual es la vulnerabilidad podemos proceder a actualizar cualquiera de los paquetes e instalar todas sus dependencias con un nivel 2 ejemplo:
+
+    npm update eslint-utils --depth 2
+
+
+Solucionar las vulnerabilidades que tengamos en nuestro proyecto básicamente, actualiza a la ultima version nuestros paquetes con las dependencias que requieren.
+    npm audit fix
+
+Despues volvemos a ejecutar npm audit para ver el nuevo estado y ver que no tengamos vulnerabilidades.
