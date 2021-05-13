@@ -69,3 +69,76 @@ Solucionar las vulnerabilidades que tengamos en nuestro proyecto básicamente, a
     npm audit fix
 
 Despues volvemos a ejecutar npm audit para ver el nuevo estado y ver que no tengamos vulnerabilidades.
+
+# Crear un paquete para npm
+
+Crear la carpeta y archivos básicos
+
+    pwd
+    mkdir packageTest
+    cd packageTest
+    git init
+    npm init
+
+Se crea el archivo index.js en la carpeta src.
+```javascript
+// Se declara el arreglo
+const messages = [
+    "David",
+    "Diana",
+    "Ana Maria",
+    "Isabela",
+    "Antonio",
+    "Norma"
+]
+
+//Crear función para enviar aleatoriamente  los nombres del arreglo
+const randomMsg = () => {
+    const message = messages[Math.floor(Math.random()*messages.length)]
+    console.log(message)
+}
+
+// Exportar como un módulo
+
+module.exports = { randomMsg }
+```
+
+Se debe crear una carpeta bin donde se crea el archivo global.js (Configuración que se necesita).
+
+```javascript
+#!/usr/bin/env node
+// se va ejecutar dentro de bash
+
+//Variable que llama la funcion que exportamos
+let random = require('../src/index.js')
+
+//Ejecuto la funcion
+random.randomMsg()
+```
+Modifico el package.json y coloco la configuración de bin que necesito.
+```javascript
+  "bin": {
+    "random-msg": "./bin/global.js"
+  },
+  "preferGlobal": true
+```
+
+Primero se debe probar de forma local.
+
+    pwd
+    npm link
+    #Se ejecuta la función
+    random-msg
+
+Otra forma de instalar el paquete.
+
+    npm i -g C:\Users\Emmanuel\random-messages
+
+Crear cuenta para poder subir el paquete
+- Npm.js https://www.npmjs.com/
+- Verificar la cuenta que llega al correo electrónico registrado.
+
+Se loguea a la cuenta creada por consola y se publica el paquete
+
+    npm adduser
+    npm publish
