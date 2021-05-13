@@ -1,6 +1,6 @@
 # NPM
 Comandos Básicos
-Sirve para crear el archivo package.json el cual contiene toda la información acerca de nuestro proyecto
+Sirve para crear el archivo package.json el cual contiene toda la información acerca de nuestro proyecto.
 
     npm init
 
@@ -11,7 +11,7 @@ Asignacion de email y nombre de usuario.
 
 # Instalación de dependencias
 
-Las dependencias se deben instalar en nuestra carpeta raiz de nuestro proyecto.
+Las dependencias se deben instalar en nuestra carpeta raíz de nuestro proyecto.
 Por defecto se instala como una independencia requerida para el proyecto es decir, que paquete que instalas es necesario para vivir en producción.
 
     npm install <pkg> 
@@ -19,7 +19,7 @@ Por defecto se instala como una independencia requerida para el proyecto es deci
     npm instal <pkg> -S
 
 
-Este flag nos va a permitir establecer que paquete que vamos a instalar solo es necesario en nuestro entorno local o el entorno de desarrollo 
+Este flag nos va a permitir establecer que paquete que vamos a instalar solo es necesario en nuestro entorno local o el entorno de desarrollo. 
 
     npm install <pkg> -D
     npm install <pkg> --save-dev
@@ -43,7 +43,7 @@ Este flag indica que el paquete no va ser instalado dentro del proyecto, simplem
 
     npm install <pkg> --dry-run
 	
-Instalar algún paquete de forma forzada. Nos va permitir instalar este paquete forzando esa instalación a que sea desde el útlimo recurso desde el servidor de NPM.
+Instalar algún paquete de forma forzada. Nos va permitir instalar este paquete forzando esa instalación a que sea desde el último recurso desde el servidor de NPM.
 
     npm install <pkg> -f
     npm install <pkg> --force
@@ -126,7 +126,7 @@ Despues volvemos a ejecutar npm audit para ver el nuevo estado y ver que no teng
 
 # Crear un paquete para npm
 
-Crear la carpeta y archivos básicos
+Crear la carpeta y archivos básicos.
 
     pwd
     mkdir packageTest
