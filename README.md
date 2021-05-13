@@ -1,3 +1,57 @@
+# NPM
+Comandos Básicos
+Sirve para crear el archivo package.json el cual contiene toda la información acerca de nuestro proyecto
+
+    npm init
+
+Asignacion de email y nombre de usuario.
+
+     npm set init.author.email <email>
+     npm set init.author.name <name>
+
+# Instalación de dependencias
+
+Las dependencias se deben instalar en nuestra carpeta raiz de nuestro proyecto.
+Por defecto se instala como una independencia requerida para el proyecto es decir, que paquete que instalas es necesarop para vivir en producción.
+
+    npm install <pkg> 
+    npm install <pkg> --save
+    npm instal <pkg> -S
+
+
+Este flag nos va a permitir establecer que paquete que vamos a instalar solo es necesario en nuestro entorno local o el entorno de desarrollo 
+
+    npm install <pkg> -D
+    npm install <pkg> --save-dev
+	
+Instalar un paquete de forma global. Esto permite que podamos utilizar este paquete en diferentes proyectos. Por lo general, se deben instalar estos paquetes con permisos de administrador.
+    npm install <pkg> -g
+    
+Ver los paquetes que estan instalados de forma global. Donde depth es profundidad.
+
+    npm list -g --depth 0
+	
+Para listar los paquetes que tiene un proyecto en específico.
+
+    npm list
+	
+Podemos instalar de forma opcional un paquete con este comando.
+
+    npm install <pkg> -O
+	
+Este flag indica que el paquete no va ser instalado dentro del proyecto, simplemente es una simulación, nada más nos muestra el output como si se fuese instalado.
+
+    npm install <pkg> --dry-run
+	
+Instalar algún paquete de forma forzada. Nos va permitir instalar este paquete forzando esa instalación a que sea desde el útlimo recurso desde el servidor de NPM.
+
+    npm install <pkg> -f
+    npm install <pkg> --force
+	
+Para instalar algún paquete con una versión específica.
+
+    npm install <pkg>@<version>
+
 # Actualizar paquetes
 
 Revisar que paquetes disponen de nuevas versiones.
