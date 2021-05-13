@@ -12,7 +12,7 @@ Asignacion de email y nombre de usuario.
 # Instalación de dependencias
 
 Las dependencias se deben instalar en nuestra carpeta raiz de nuestro proyecto.
-Por defecto se instala como una independencia requerida para el proyecto es decir, que paquete que instalas es necesarop para vivir en producción.
+Por defecto se instala como una independencia requerida para el proyecto es decir, que paquete que instalas es necesario para vivir en producción.
 
     npm install <pkg> 
     npm install <pkg> --save
